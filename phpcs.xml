@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Coding Standards">
+	<!-- See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml -->
+	<!-- See https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/blob/develop/WordPress-Core/ruleset.xml -->
+
+	<description>A custom ruleset for WordPress code standards.</description>
+
+	<config name="installed_paths" value="/Users/jasonwitt/bin/wpcs"/>
+	<!-- <config name="installed_paths" value="/Path/to/wpcs"/> -->
+
+	<!-- Include the WordPress-Extra ruleset, with some WDS exclusions. -->
+	<rule ref="WordPress">
+		<exclude name="WordPress.Arrays.ArrayDeclarationSpacing.AssociativeKeyFound"/>
+		<exclude name="WordPress.Classes.ClassInstantiation.MissingParenthesis"/>
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+	</rule>
+	
+</ruleset>
