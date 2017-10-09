@@ -9,7 +9,7 @@
  * @author     Jason Witt <info@jawdev.io>
  * @copyright  Copyright (c) 2017, Jason Witt
  * @license    GNU General Public License v2 or later
- * @version 0.1.0
+ * @version    0.7.0
  */
 
 if ( ! function_exists( 'cached_url_to_postid' ) ) {
