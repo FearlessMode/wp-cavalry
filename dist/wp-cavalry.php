@@ -14,7 +14,7 @@
  * @author    Jason Witt <info@jawdev.io>
  * @copyright Copyright (c) {{year}}, Jason Witt
  * @license   GNU General Public License v2 or later
- * @version    0.7.0
+ * @version   0.7.0
  */
 
 namespace WP_Cavalry;
@@ -97,17 +97,9 @@ if ( ! class_exists( 'WP_Cavalry' ) ) {
 		 */
 		public function classes() {
 			// Instantiate the Classes.
-			$cached_count_user_posts    = new Classes\Cached_Count_User_Posts;
-			$cached_full_comment_counts = new Classes\Cached_Full_Comment_Counts;
-			$cached_nav_menu_object     = new Classes\Cached_Get_Nav_Menu_Object;
-			$cached_get_page_by_path    = new Classes\Cached_Get_Page_By_Path;
-			$cached_get_page_by_title   = new Classes\Cached_Get_Page_By_Title;
-			$cached_get_term_by         = new Classes\Cached_Get_Term_By;
-			$cached_term_exists         = new Classes\Cached_Term_Exists;
-			$cached_url_to_postid       = new Classes\Cached_Url_To_Postid;
-			$cached_wp_query            = new Classes\Cached_WP_Query;
+			$cached_full_comment_counts = new Classes\Cache\Cached_Full_Comment_Counts;
+			$split_terms                = new Classes\Utilities\Split_Terms;
 			$template_tags              = new Classes\Template_Tags( trailingslashit( plugin_dir_path( __FILE__ ) ) . 'includes/functions' );
-			$split_terms                = new Classes\Split_Terms;
 		}
 	}
 }

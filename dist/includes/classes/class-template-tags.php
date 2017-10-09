@@ -59,11 +59,11 @@ if ( ! class_exists( 'Template_Tags' ) ) {
 		 * @return void
 		 */
 		public function include_the_files() {
-			// Get the file to include.
-			$files = $this->scan_directory( $this->dir );
+			// Get the files to include.
+			$files = $this->scan_directory();
 
-			// Loop through the files array.
-			foreach ( $files as $file ) {
+			// Loop through the $files array.
+			foreach( $files as $file ) {
 
 				// Verify that the file exists.
 				if ( file_exists( $file ) ) {
@@ -86,18 +86,21 @@ if ( ! class_exists( 'Template_Tags' ) ) {
 			// Declare the results array to return.
 			$results = array();
 
-			// Scan the dir for files.
-			$files = scandir( $this->dir );
+			// Recursively scan the dirs for files.
+			$files = new \RecursiveDirectoryIterator( $this->dir );
 
-			// Loop through the files in the directory.
-			foreach ( $files as $file ) {
-				// Exclude . and ..
-				if ( ('.' === $file ) || ( '..' === $file ) ) {
+			// Loop through the files.
+			foreach ( new \RecursiveIteratorIterator( $files ) as $file ) {
+				$filename = $file->getFilename();
+				$filepath = $file->getPathname();
+				
+				// Exclude dot files.
+				if ( '.' === substr( $filename, 0, 1 ) ) {
 					continue;
 				}
 
 				// Get the path to the file.
-				$file = trailingslashit( $this->dir ) . $file;
+				$file = $filepath;
 
 				// Get the file header info.
 				$header = get_file_data( $file, array( 'Load' => 'Load' ) );

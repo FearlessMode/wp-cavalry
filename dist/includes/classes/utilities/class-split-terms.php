@@ -3,14 +3,14 @@
  * Split Terms.
  *
  * @package    WP_Cavalry
- * @subpackage WP_Cavalry/Includes/Classes
+ * @subpackage WP_Cavalry/Includes/Classes/Utilities
  * @author     Jason Witt <info@jawdev.io>
  * @copyright  Copyright (c) 2017, Jason Witt
  * @license    GNU General Public License v2 or later
- * @version 0.1.0
+ * @version    0.7.0
  */
 
-namespace WP_Cavalry\Includes\Classes;
+namespace WP_Cavalry\Includes\Classes\Utilities;
 
 if ( ! class_exists( 'Split_Terms' ) ) {
 

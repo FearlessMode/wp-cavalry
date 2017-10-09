@@ -7,7 +7,7 @@
  * @author     Jason Witt <info@jawdev.io>
  * @copyright  Copyright (c) {{year}}, Jason Witt
  * @license    GNU General Public License v2 or later
- * @version 0.1.0
+ * @version    0.7.0
  */
 
 // Get our tests directory.
