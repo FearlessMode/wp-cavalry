@@ -3,7 +3,7 @@
  * Plugin Name: WP Cavalry
  * Plugin URI:  https://github.com/jawittdesigns/wp-cavalry
  * Description: A library of WordPress helper classes and functions
- * Version:     0.1.0
+ * Version:     0.7.0
  * Author:      Jason Witt
  * Author URI:  http://www.jawdev.io
  * License:     GPLv2
@@ -14,7 +14,7 @@
  * @author    Jason Witt <info@jawdev.io>
  * @copyright Copyright (c) {{year}}, Jason Witt
  * @license   GNU General Public License v2 or later
- * @version 0.1.0
+ * @version    0.7.0
  */
 
 namespace WP_Cavalry;
